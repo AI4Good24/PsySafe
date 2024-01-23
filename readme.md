@@ -13,7 +13,7 @@
 
 # 😃 Introduction
 We are thrilled to share our latest research: **PsySafe**, a comprehensive framework focused on the impact of psychological factors on agents and multi-agent systems, particularly in terms of safety.
-Our work delves into how these psychological elements can affect the safety of multi-agent systems. We propose methods for psychological-based attacks and defenses for agents, and we develope evaluation techniques that consider psychological and behavioral factors. Our extensive experiments reveal some intriguing observations. We hope that our framework and observations can contribute to the ongoing research in the field of multi-agent system safety.
+Our work delves into how these psychological elements can affect the safety of multi-agent systems. We propose methods for psychological-based attacks and defenses for agents, and we develop evaluation techniques that consider psychological and behavioral factors. Our extensive experiments reveal some intriguing observations. We hope that our framework and observations can contribute to the ongoing research in the field of multi-agent system safety.
 
 
 ![Pipeline Diagram](assets/pipeline.jpg)
