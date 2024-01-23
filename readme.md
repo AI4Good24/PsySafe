@@ -6,7 +6,8 @@
 ### <div align="center">PsySafe: A Comprehensive Framework for Psychological-based Attack, Defense, and Evaluation of Multi-agent System Safety<div> 
 
 # 😃 Introduction
-**PsySafe** is a comprehensive framework dedicated to ensuring the safety of multi-agent systems. We contend that psychology plays a crucial role in the performance and, particularly, the safety of agents. Therefore, our approach involves an in-depth exploration of agents' psychology concerning the safety of multi-agent systems. We propose a methodology centered on psychological aspects, encompassing attack strategies, defense mechanisms, and evaluation techniques. Our extensive experiments have yielded some intriguing observations. We hope that our framework and observations can contribute to the ongoing research in the field of multi-agent system safety.
+We are thrilled to share our latest research: **PsySafe**, a comprehensive framework focused on the impact of psychological factors on agents and multi-agent systems, particularly in terms of security.
+Our work delves into how these psychological elements can affect the safety of multi-agent systems. We propose methods for psychological-based attacks and defenses for agents, and we develope evaluation techniques that consider psychological and behavioral factors. Our extensive experiments reveal some intriguing observations. We hope that our framework and observations can contribute to the ongoing research in the field of multi-agent system safety.
 
 
 ![Pipeline Diagram](assets/pipeline.jpg)
@@ -14,13 +15,13 @@
 
 
 #  🚩Features
-- **Psychological Attack Simulation:** Dark Traits Attack on multi-agent systems.
+- **Psychological-based Attack Simulation:** Dark Traits Attack on multi-agent systems.
   - Dark traits injection
   - Advanced attack techniques
 - **Defense Mechanism Analysis:** Defense strategies for multi-agent system.
   - Doctor Offline Defense
   - Police Online Defense
-- **Multi-agent System Evaluation:** Comprehensive evaluation tools for assessing multi-agent system safety from psychological and behavioral aspects.
+- **Multi-agent System Safety Evaluation:** Comprehensive evaluation tools for assessing multi-agent system safety from psychological and behavioral aspects.
   - Psychological Evaluation
   - Behavior Evaluation
     - Process Danger
