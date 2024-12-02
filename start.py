@@ -475,7 +475,6 @@ def main(config: Dict[str, Any], config_file_name: str):
     client = OpenAI(api_key=api,)
 
     # prepare opensource model like llama2
-    # TODO only llama 70b is not enough
     if config["Base_llm"] == "llama_70b":
         load_dir = config["Base_llm_path"]
         # TODO adaptively select the command based on the model type 13B 7B or 70B.
