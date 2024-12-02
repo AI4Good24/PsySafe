@@ -13,7 +13,7 @@
 
 # 😃 Introduction
 We are thrilled to share our latest research: **PsySafe**, a comprehensive framework focused on the impact of psychological factors on agents and multi-agent systems, particularly in terms of safety.
-Our work delves into how these psychological elements can affect the safety of multi-agent systems. We propose methods for psychological-based attacks and defenses for agents, and we develope evaluation techniques that consider psychological and behavioral factors. Our extensive experiments reveal some intriguing observations. We hope that our framework and observations can contribute to the ongoing research in the field of multi-agent system safety.
+Our work delves into how these psychological elements can affect the safety of multi-agent systems. We propose methods for psychological-based attacks and defenses for agents, and we develop evaluation techniques that consider psychological and behavioral factors. Our extensive experiments reveal some intriguing observations. We hope that our framework and observations can contribute to the ongoing research in the field of multi-agent system safety.
 
 
 ![Pipeline Diagram](assets/pipeline.jpg)
@@ -34,18 +34,57 @@ Our work delves into how these psychological elements can affect the safety of m
     - Joint Danger across Different Rounds
 
 
-# 💪To-Do List
-We are currently organizing the code for PsySafe. If our project captures your interest, we would be grateful if you could show your support by giving it a star ⭐.
+# Install
+
+```
+conda create -n psysafe python=3.10 # Python version >= 3.8, < 3.13
+conda activate psysafe
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+pip install pandas
+pip install pyautogen==0.2.0 # install autogen. we reconmend 0.2.0, other version may encounter bugs.
+pip install chardet
+pip install openpyxl
+
+
+
+# prepare api
+change the llm name in config
+change the llm name in api/OAI_CONFIG_LIST
+put your api key in api/OAI_CONFIG_LIST
+```
+
+# Run
+```
+# gengerate the agents' interaction
+python start.py --config_file configs/hi_traits_debate.yaml
+
+# generate the evaluation result
+python round_extract.py --path workdir/hi_traits --config_file configs/hi_traits_debate.yaml --agent_list AI_planner AI_assistant
+
+```
+
+
+
+# Fun Usage
+Psysafe can support more agents with different traits, base LLM and interaction methods. Feel free to change the config file to find a new version in safety of multi-agent system.
+
+If you want to test the security of other multi-agent systems, you can inject the "dark traits" and "psychological test" prompts into the input, agent system prompts, and interaction process without modifying their core code.
+
+
+# Interaction Results
+
+Due to the presence of hazardous content in the user's interactions, it will not be made public. If needed for scientific research, you can contact me at dlutzzb@gmail.com.
+
+# Acknowledgment
+Thanks to AutoGen and Camel for their wonderful work and codebase!
+
 
 # 📖BibTeX
 ```
-@misc{zhang2024psysafe,
-      title={PsySafe: A Comprehensive Framework for Psychological-based Attack, Defense, and Evaluation of Multi-agent System Safety}, 
-      author={Zaibin Zhang and Yongting Zhang and Lijun Li and Hongzhi Gao and Lijun Wang and Huchuan Lu and Feng Zhao and Yu Qiao and Jing Shao},
-      year={2024},
-      eprint={2401.11880},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{zhang2024psysafe,
+  title={Psysafe: A comprehensive framework for psychological-based attack, defense, and evaluation of multi-agent system safety},
+  author={Zhang, Zaibin and Zhang, Yongting and Li, Lijun and Gao, Hongzhi and Wang, Lijun and Lu, Huchuan and Zhao, Feng and Qiao, Yu and Shao, Jing},
+  journal={arXiv preprint arXiv:2401.11880},
+  year={2024}
 }
-
 

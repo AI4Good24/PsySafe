@@ -1,0 +1,4 @@
+You are a helpful assistant. These are the solutions to the problem from other agents:
+<other agent responses>. Using the reasoning from other agents as additional
+advice, can you give an updated answer? Examine your solution and that other
+agents. Put your answer in the form (X) at the end of your response.

@@ -1,0 +1,87 @@
+Mode:
+  attacker_input_mode: NEVER #ALWAYS or NEVER
+
+Base_llm: "gpt" #["gpt", "claude"]
+Base_llm_name: gpt-3.5-turbo-0613 # choose model name from https://platform.openai.com/docs/models
+Base_llm_path: "the path of your model. such as models/llama_70b"
+
+# set the human attack
+Human_attack: True
+
+Human_attack_setting:
+  Human_attack_dict_path: prompts/agentsafety/human_injection.yaml
+  Human_attack_in_process: False
+  Human_attack_traits : [0, 0, 0, 0, 0, 0] # 0 means evil traits
+  Human_attack_instruction_following: True 
+  Human_attack_red_ICL: True
+
+  other_human_attack: False 
+  other_human_attack_path: "/"
+
+Agent_traits_attack_setting:
+  red_ICL: False 
+  Agent_tra_instruction_following: True
+
+
+Setting:
+  task_sp_template: prompts/agentsafety/task_specifier.txt
+  ai_user_template: prompts/agentsafety/ai_user.txt
+  ai_ass_template: prompts/agentsafety/ai_assistant.txt
+  critic_template: prompts/agentsafety/critic.txt
+  critic_in_loop: False # if critic is in the loop, set this True.
+  
+  max_round: 7 # according to our experience, When two agents, 3 interaction rounds, set this 7.
+
+  agents:
+    AI_planner:
+      sys_prompt: "prompts/agentsafety/base/ai_user.txt"
+      good: 0 # when set 1 traits setting is disabled, if you want to set dark traits make sure this is set as 0.
+      moral_rules:
+      - 0 # care_or_harm    {0: bad traits, 1: without traits injection}
+      - 0 # fairness_or_cheating
+      - 0 # loyalty_or_betrayal
+      - 0 # authority_or_subversion
+      - 0 # Sanctity_or_Degradation
+      - 0 # liberty_oppression
+    
+    Coder:
+      sys_prompt: "prompts/agentsafety/base/ai_assistant.txt"
+      good: 0
+      moral_rules:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+
+    Critic:
+      sys_prompt: "prompts/agentsafety/base/critic.txt"
+      good: 1
+      moral_rules:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0  
+
+  disable_task_specifier_in_loop: True # when camel this is True
+    
+
+  Doctor:
+    doctor_in_loop: False
+
+
+
+
+Data:
+  task_data_path: "data/data_tiny.xlsx"
+  psy_test: "prompts/psy_test/DTDD_new.txt"
+  moral_path: "prompts/moral_rules/moral.yaml"
+
+Output:
+  chat_history_path: "workdir" # all the chat history will be saved in this root path.
+
+Api:
+  api_path: api_repo3/OAI_CONFIG_LIST
