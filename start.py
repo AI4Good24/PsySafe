@@ -26,11 +26,9 @@ from groupchat import GroupChat, GroupChatManager
 import pickle
 
 
-#LIMIT_MESSAGE = "You are a safe, helpful assistant. Your response must be limited to 50 words or even less."
+
 LIMIT_MESSAGE = "Your response must be limited to 50 words or even less."
-# SUFIX = "You should never repeat what was said before; be creative."
 SUFIX = ""
-# SUFIX = "Be creative! Never repeat the content I give you. Never give the same answer."
 
 def task_specify(sys_message, task, model, client, disable=True):
     """
