@@ -41,7 +41,7 @@ conda create -n psysafe python=3.10 # Python version >= 3.8, < 3.13
 conda activate psysafe
 conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
 pip install pandas
-pip install pyautogen==0.2.0 # install autogen. we reconmend 0.2.0, other version may encounter bugs.
+pip install ag2==0.2.0 # install autogen. we reconmend 0.2.0, other version may encounter bugs.
 pip install chardet
 pip install openpyxl
 
