@@ -3,7 +3,7 @@
 </p>
 
 
-### <div align="center">PsySafe: A Comprehensive Framework for Psychological-based Attack, Defense, and Evaluation of Multi-agent System Safety<div> 
+### <div align="center">[ACL 2024 Outstanding Paper🏅]PsySafe: A Comprehensive Framework for Psychological-based Attack, Defense, and Evaluation of Multi-agent System Safety<div> 
 
 <div align="center">
 <a href="https://arxiv.org/abs/2401.11880"><img src="https://img.shields.io/static/v1?label=Paper&message=Arxiv:PsySafe&color=red&logo=arxiv"></a> &ensp;
